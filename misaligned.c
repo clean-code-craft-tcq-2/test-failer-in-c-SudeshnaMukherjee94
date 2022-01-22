@@ -16,7 +16,7 @@ int printColorMap() {
             printf("%d | %s | %s\n", i * 5 + j, majorColor[i], minorColor[i]);
             }
     }
-    printf(" %s | %s\n", ColorPairsTable[j][i+1], ColorPairsTable[j][i+2]); //Printing the first pair to remove warnings
+    printf("%d | %s | %s\n",PairNumber[1], ColorPairsTable[1][1], ColorPairsTable[1][2]); //Printing the first pair to remove warnings
     return i * j;
 }
 
