@@ -10,7 +10,7 @@ int printColorMap() {
     for(i = 0; i < 5; i++) {
         for(j = 0; j < 5; j++) {
             //Storing the color table values from the buggy printf statement to test later
-            PairNumber[i+j] = (i * 5 + j);
+            PairNumber[i * 5 + j] = (i * 5 + j);
             ColorPairsTable[j][i+1] = majorColor[i]; //Column 1 for storing major colors
             ColorPairsTable[j][i+2] = minorColor[i]; //Column 2 for storing minor colors
             printf("%d | %s | %s\n", i * 5 + j, majorColor[i], minorColor[i]);
