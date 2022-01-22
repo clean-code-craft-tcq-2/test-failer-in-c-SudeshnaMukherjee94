@@ -8,7 +8,8 @@ int printColorMap() {
     const char* ColorPairsTable[25][3] = {}; //Defining a 2D array to store the 25 color pairs along with pair numbers
     for(i = 0; i < 5; i++) {
         for(j = 0; j < 5; j++) {
-            ColorPairsTable[j][i]= &(i * 5 + j); //Storing the pair numbers for each pair
+            int PairNumber = (i * 5 + j);
+            ColorPairsTable[j][i]= &PairNumber; //Storing the pair numbers for each pair
             ColorPairsTable[j][i+1] = majorColor[i]; //Column 1 for storing major colors
             ColorPairsTable[j][i+2] = minorColor[i]; //Column 2 for storing minor colors
             printf("%d | %s | %s\n", i * 5 + j, majorColor[i], minorColor[i]);
