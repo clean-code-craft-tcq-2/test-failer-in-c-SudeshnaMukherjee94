@@ -9,12 +9,12 @@ int printColorMap() {
     for(i = 0; i < 5; i++) {
         for(j = 0; j < 5; j++) {
             //Storing the color table values from the buggy printf statement to test later
-            ColorPairsTable[j][i+1] = majorColor[i]; //Column 1 for storing major colors
-            ColorPairsTable[j][i+2] = minorColor[i]; //Column 2 for storing minor colors
+            ColorPairsTable[j][i] = majorColor[i]; //Column 1 for storing major colors
+            ColorPairsTable[j][i+1] = minorColor[i]; //Column 2 for storing minor colors
             printf("%d | %s | %s\n", i * 5 + j, majorColor[i], minorColor[i]);
             }
     }
-    if (((*ColorPairsTable)[1][1] == "White") & (ColorPairsTable[1][2] == "Blue")) //Checking if the first color pair in the table is White and Blue
+    if (((ColorPairsTable)[0][0] == majorColor[0]) & (ColorPairsTable[1][2] == "Blue")) //Checking if the first color pair in the table is White and Blue
         return 1;
     else
         return 0;
