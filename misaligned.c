@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 
-int printColorMap() {
+const char printColorMap() {
     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
     const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
     int i = 0, j = 0;
