@@ -13,6 +13,7 @@ int printColorMap() {
             ColorPairsTable[j][i+1] = majorColor[i]; //Column 1 for storing major colors
             ColorPairsTable[j][i+2] = minorColor[i]; //Column 2 for storing minor colors
             printf("%d | %s | %s\n", i * 5 + j, majorColor[i], minorColor[i]);
+            printf("%s | %s | %s\n", ColorPairsTable[j][i], ColorPairsTable[j][i+1], ColorPairsTable[j][i+2]); //Printing the array to remove warnings
         }
     }
     return i * j;
