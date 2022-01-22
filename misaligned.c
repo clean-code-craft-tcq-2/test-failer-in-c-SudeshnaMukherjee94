@@ -5,10 +5,10 @@ int printColorMap() {
     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
     const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
     int i = 0, j = 0;
-    const char* ColorPairsTable[25][3] = {}; //Defining a 2D array to store the 25 color pairs along with pair numbers
+    const char* ColorPairsTable[25][3] = {}; //Defining a 2D array to store the 25 color pairs 
+    int PairNumber[25] = {}; //Defining a number array to store the pair numbers
     for(i = 0; i < 5; i++) {
         for(j = 0; j < 5; j++) {
-            int PairNumber[25] = {};
             //Storing the color table values from the buggy printf statement to test later
             PairNumber[i+j] = (i * 5 + j);
             ColorPairsTable[j][i+1] = majorColor[i]; //Column 1 for storing major colors
