@@ -23,7 +23,7 @@ int printColorMap() {
 int main() {
     int result = printColorMap();
     assert(result == 25);
-    //assert(ColorPairsTable[1][1] == "White" & ColorPairsTable[1][2] == "Blue") //Checking if the first color pair in the table is White and Blue
+    assert(PairNumber == 1 & ColorPairsTable[1][1] == "White" & ColorPairsTable[1][2] == "Blue") //Checking if the first color pair in the table is White and Blue
     printf("All is well (maybe!)\n");
     return 0;
 }
