@@ -14,8 +14,8 @@ int printColorMap() {
             printf("%d | %s | %s\n", i * 5 + j, majorColor[i], minorColor[i]);
             }
     }
-    if (((ColorPairsTable)[0][0] == majorColor[0]) & (ColorPairsTable[1][2] == "Blue")) //Checking if the first color pair in the table is White and Blue
-        return 1;
+    if (((ColorPairsTable)[0][0] == majorColor[0]) & (ColorPairsTable[0][1] == minorColor[0])) //Checking if the first color pair in the table is White and Blue
+        return 1; // Implies that test failed
     else
         return 0;
     //return i * j;
