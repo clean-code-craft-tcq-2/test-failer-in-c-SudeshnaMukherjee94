@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 
-const char printColorMap() {
+const char* printColorMap() {
     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
     const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
     int i = 0, j = 0;
@@ -22,7 +22,7 @@ const char printColorMap() {
 }
 
 int main() {
-    char result = printColorMap();
+    const char result = printColorMap();
     //assert(result == 25);
     assert(result[1][1] == "White" & result[1][2] == "Blue") //Checking if the first color pair in the table is White and Blue
     printf("All is well (maybe!)\n");
