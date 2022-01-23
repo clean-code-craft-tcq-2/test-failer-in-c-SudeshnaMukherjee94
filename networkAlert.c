@@ -1,6 +1,8 @@
-// This file is for switching between the test env to integration env
-
 #include <stdio.h>
+
+// NOTE :- 
+// This file is for switching between the test env to integration env
+// An OR Logic can be added here to switch between the Stub code and the code for sending the ALERT over network
 
 int networkAlertStub(float celcius) {
     printf("ALERT: Temperature is %.1f celcius.\n", celcius);
