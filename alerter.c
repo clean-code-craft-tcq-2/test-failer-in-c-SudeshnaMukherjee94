@@ -25,7 +25,7 @@ int alertInCelcius(float farenheit) {
     }
     //Test Case :- If input temperature range crosses the normal range of 35(=95F) Celcius to 37.5Celcius(=99.5F) 
     //             AND still alert failure counter is not greater than 0 --> Test case failed
-    if ((farenheit<95 | farenheit>99.5) & !(alertFailureCount > 0))
+    if (((farenheit<95) | (farenheit>99.5)) & !(alertFailureCount > 0))
         return 1; //Test failed
     else
         return 0; //Test passed
