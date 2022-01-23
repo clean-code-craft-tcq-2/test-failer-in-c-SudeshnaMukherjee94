@@ -4,6 +4,8 @@
 
 int alertFailureCount = 0;
 
+// Shifted the stub part(the commented part below) to a seperated file so that it can be modified later during integration without disturbing the main production code
+
 /*int networkAlertStub(float celcius) {
     printf("ALERT: Temperature is %.1f celcius.\n", celcius);
     // Return 200 for ok
