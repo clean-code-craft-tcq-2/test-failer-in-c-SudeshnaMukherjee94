@@ -37,8 +37,8 @@ int main() {
     //alertInCelcius(303.6);
     assert (alertInCelcius(99)==0); // Test for "ok" value
     assert (alertInCelcius(96)==0); // Test for "ok" value
-    assert (alertInCelcius(303.6)==1); // Test for "not-ok" value
-    assert (alertInCelcius(90)==1); // Test for "not-ok" value
+    assert (alertInCelcius(303.6)==0); // Test for "not-ok" value
+    assert (alertInCelcius(90)==0); // Test for "not-ok" value
     printf("%d alerts failed.\n", alertFailureCount);
     printf("All is well (maybe!)\n");
     return 0;
