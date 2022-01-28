@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 
-const char* FormColorMap()  {
+const char FormColorMap()  {
     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
     const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
     int i = 0, j = 0;
@@ -13,7 +13,7 @@ const char* FormColorMap()  {
             ColorPairsTable[i*5+j][1] = minorColor[i]; //Column 2 for storing minor colors
             }
     }
-    return ColorPairsTable[][];
+    return ColorPairsTable;
 }
 
 int printColorMap(const char* ColorPairsTable[][]) {
