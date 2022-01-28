@@ -13,7 +13,7 @@ const char* FormColorMap()  {
             ColorPairsTable[i*5+j][1] = minorColor[i]; //Column 2 for storing minor colors
             }
     }
-    return ColorPairsTable;
+    return ColorPairsTable[][];
 }
 
 int printColorMap(const char* ColorPairsTable[][]) {
