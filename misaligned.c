@@ -2,7 +2,7 @@
 #include <assert.h>
 
 const char* ColorPairsTable[25][3] = {}; //Defining a 2D array to store the 25 color pairs 
-const char* FormColorMap()  {
+int FormColorMap()  {
     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
     const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
     int i = 0, j = 0;
@@ -14,6 +14,7 @@ const char* FormColorMap()  {
             ColorPairsTable[i*5+j][1] = minorColor[i]; //Column 2 for storing minor colors
             }
     }
+    return i * j;
     //return ColorPairsTable;
 }
 
@@ -45,6 +46,7 @@ int printColorMap() {
 
 int main() {
     //const char* ColorMap = FormColorMap();
+    int totalItems = FormColorMap();
     int result = printColorMap();
     assert(result == 0);
     printf("All is well (maybe!)\n");
