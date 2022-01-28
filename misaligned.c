@@ -5,8 +5,7 @@ const char* ColorPairsTable[25][3] = {}; //Defining a 2D array to store the 25 c
 int FormColorMap()  {
     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
     const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
-    int i = 0, j = 0;
-    //const char* ColorPairsTable[25][3] = {}; //Defining a 2D array to store the 25 color pairs 
+    int i = 0, j = 0; 
     for(i = 0; i < 5; i++) {
         for(j = 0; j < 5; j++) {
             //Storing the color table values from the buggy printf statement to test later
@@ -15,7 +14,6 @@ int FormColorMap()  {
             }
     }
     return i * j;
-    //return ColorPairsTable;
 }
 
 int printColorMap() {
@@ -41,11 +39,9 @@ int printColorMap() {
         return 1; // Implies that test failed
     else
         return 0;
-    //return i * j;
 }
 
 int main() {
-    //const char* ColorMap = FormColorMap();
     int totalItems = FormColorMap();
     int result = printColorMap();
     assert(totalItems == 25);
