@@ -6,7 +6,7 @@
     int i = 0, j = 0;
     const char* ColorPairsTable[25][3] = {}; //Defining a 2D array to store the 25 color pairs 
 
-const char* (*)[3] FormColorMap()  {
+const char FormColorMap()  {
    
     for(i = 0; i < 5; i++) {
         for(j = 0; j < 5; j++) {
