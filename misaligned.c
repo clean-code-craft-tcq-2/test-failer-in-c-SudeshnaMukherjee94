@@ -48,6 +48,7 @@ int main() {
     //const char* ColorMap = FormColorMap();
     int totalItems = FormColorMap();
     int result = printColorMap();
+    assert(totalItems == 25);
     assert(result == 0);
     printf("All is well (maybe!)\n");
     return 0;
