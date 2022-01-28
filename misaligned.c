@@ -17,7 +17,7 @@ const char* FormColorMap()  {
     return ColorPairsTable;
 }
 
-const char* printColorMap(const char* ColorPairsTable) {
+int printColorMap(const char* ColorPairsTable) {
     for(i = 0; i < 5; i++) {
         for(j = 0; j < 5; j++) {
             printf("%d | %s | %s\n", i * 5 + j, ColorPairsTable[i*5+j][0], ColorPairsTable[i*5+j][1]);
