@@ -14,7 +14,7 @@ const char* FormColorMap()  {
             ColorPairsTable[i*5+j][1] = minorColor[i]; //Column 2 for storing minor colors
             }
     }
-    return ColorPairsTable;
+    //return ColorPairsTable;
 }
 
 int printColorMap() {
@@ -44,7 +44,7 @@ int printColorMap() {
 }
 
 int main() {
-    const char* ColorMap = FormColorMap();
+    //const char* ColorMap = FormColorMap();
     int result = printColorMap();
     assert(result == 0);
     printf("All is well (maybe!)\n");
