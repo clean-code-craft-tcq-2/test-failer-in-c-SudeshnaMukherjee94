@@ -35,9 +35,6 @@ int alertInCelcius(float farenheit) {
 }
 
 int main() {
-    //alertInCelcius(100);
-    //alertInCelcius(400.5);
-    //alertInCelcius(303.6);
     assert (alertInCelcius(99)==0); // Test for "ok" value
     assert (alertInCelcius(96)==0); // Test for "ok" value
     assert (alertInCelcius(303.6)==0); // Test for "not-ok" value
