@@ -21,7 +21,7 @@ int printColorMap() {
     int i = 0, j = 0;
     for(i = 0; i < 5; i++) {
         for(j = 0; j < 5; j++) {
-            printf("%d | %s | %s\n", i * 5 + j, ColorPairsTable[i*5+j][0], ColorPairsTable[i*5+j][1]);
+            printf(" %d | %s | %s\n", i * 5 + j +1, ColorPairsTable[i][0], ColorPairsTable[i*5+j][1]);
             }
     }
             return 0;
