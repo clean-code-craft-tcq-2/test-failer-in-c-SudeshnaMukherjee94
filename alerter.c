@@ -12,7 +12,7 @@ float ConvertFahrenheitToCelsius(float farenheit)
     return celsius;
 }
 
-void alertInCelcius(int NetworkResponse) {
+int alertInCelcius(int NetworkResponse) {
     if (NetworkResponse != 200) {
         // non-ok response is not an error! Issues happen in life!
         // let us keep a count of failures to report
@@ -20,15 +20,21 @@ void alertInCelcius(int NetworkResponse) {
         // Add a test below to catch this bug. Alter the stub above, if needed.
         alertFailureCount += 0;
     }
+      return alertFailureCount;
 }
 
 int main() {
+      
     printf("Enter the temperature");
     float TempInput = 0;
     scanf("%f", &TempInput);
     float TempInCelsius = ConvertFahrenheitToCelsius(TempInput);
-    assert (alertInCelcius(TempInCelsius,networkAlertStubOk(TempInCelsius)) == 0); // Test for "ok" value
-    assert (alertInCelcius(TempInCelsius,networkAlertStubOk(TempInCelsius) > 0); // Test for "not-ok" value
+      
+    int ResponseOk = networkAlertStubOk(TempInCelsius);
+    int ResponseNotOk = networkAlertStubOk(TempInCelsius);
+      
+    assert (alertInCelcius(ResponseOk) == 0); // Test for "ok" value
+    assert (alertInCelcius(ResponseNotOk) > 0); // Test for "not-ok" value
     printf("%d alerts failed.\n", alertFailureCount);
     printf("All is well (maybe!)\n");
     return 0;
