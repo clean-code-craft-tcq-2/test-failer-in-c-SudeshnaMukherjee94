@@ -2,8 +2,6 @@
 #include <assert.h>
 #include "networkAlert.c"
 
-int alertFailureCount = 0;
-
 // Shifted the stub part(the commented part below) to a seperated file so that it can be modified later during integration without disturbing the main production code
 
 float ConvertFahrenheitToCelsius(float farenheit)
@@ -13,6 +11,7 @@ float ConvertFahrenheitToCelsius(float farenheit)
 }
 
 int alertInCelcius(int NetworkResponse) {
+    int alertFailureCount = 0;
     if (NetworkResponse != 200) {
         // non-ok response is not an error! Issues happen in life!
         // let us keep a count of failures to report
@@ -35,7 +34,7 @@ int main() {
       
     assert (alertInCelcius(ResponseOk) == 0); // Test for "ok" value
     assert (alertInCelcius(ResponseNotOk) != 0); // Test for "not-ok" value
-    printf("%d alerts failed.\n", alertFailureCount);
+    //printf("%d alerts failed.\n", alertFailureCount);
     printf("All is well (maybe!)\n");
     return 0;
 }
