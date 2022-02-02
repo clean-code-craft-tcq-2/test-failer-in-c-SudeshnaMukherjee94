@@ -8,8 +8,7 @@ int alertFailureCount = 0;
 
 int alertInCelcius(float farenheit, int NetworkResponse) {
     float celcius = (farenheit - 32) * 5 / 9;
-    int returnCode = networkAlertStub(celcius);
-    if (returnCode != 200) {
+    if (NetworkResponse != 200) {
         // non-ok response is not an error! Issues happen in life!
         // let us keep a count of failures to report
         // However, this code doesn't count failures!
