@@ -34,7 +34,7 @@ int main() {
     int ResponseNotOk = networkAlertStubOk(TempInCelsius);
       
     assert (alertInCelcius(ResponseOk) == 0); // Test for "ok" value
-    //assert (alertInCelcius(ResponseNotOk) > 0); // Test for "not-ok" value
+    assert (alertInCelcius(ResponseNotOk) != 0); // Test for "not-ok" value
     printf("%d alerts failed.\n", alertFailureCount);
     printf("All is well (maybe!)\n");
     return 0;
