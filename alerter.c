@@ -6,7 +6,13 @@ int alertFailureCount = 0;
 
 // Shifted the stub part(the commented part below) to a seperated file so that it can be modified later during integration without disturbing the main production code
 
-void alertInCelcius(float farenheit, int NetworkResponse) {
+float ConvertFahrenheitToCelsius(float farenheit)
+{
+      float celsius = (farenheit - 32) * 5 / 9;
+    return celsius;
+}
+
+void alertInCelcius(int NetworkResponse) {
     if (NetworkResponse != 200) {
         // non-ok response is not an error! Issues happen in life!
         // let us keep a count of failures to report
@@ -17,8 +23,12 @@ void alertInCelcius(float farenheit, int NetworkResponse) {
 }
 
 int main() {
-    assert (alertInCelcius(303.6,networkAlertStubOk(303.6)) == 0); // Test for "ok" value
-    assert (alertInCelcius(400.5,networkAlertStubNotOk(400.5)) > 0); // Test for "not-ok" value
+    printf("Enter the temperature");
+    float TempInput = 0;
+    scanf("%f", &TempInput);
+    float TempInCelsius = ConvertFahrenheitToCelsius(TempInput);
+    assert (alertInCelcius(TempInCelsius,networkAlertStubOk(TempInCelsius)) == 0); // Test for "ok" value
+    assert (alertInCelcius(TempInCelsius,networkAlertStubOk(TempInCelsius) > 0); // Test for "not-ok" value
     printf("%d alerts failed.\n", alertFailureCount);
     printf("All is well (maybe!)\n");
     return 0;
