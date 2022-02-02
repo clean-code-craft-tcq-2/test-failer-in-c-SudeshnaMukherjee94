@@ -31,7 +31,7 @@ int main() {
     float TempInCelsius = ConvertFahrenheitToCelsius(TempInput);
       
     int ResponseOk = networkAlertStubOk(TempInCelsius);
-    int ResponseNotOk = networkAlertStubOk(TempInCelsius);
+    int ResponseNotOk = networkAlertStubNotOk(TempInCelsius);
       
     assert (alertInCelcius(ResponseOk) == 0); // Test for "ok" value
     assert (alertInCelcius(ResponseNotOk) != 0); // Test for "not-ok" value
