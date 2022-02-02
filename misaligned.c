@@ -33,7 +33,7 @@ int printColorMap() {
 int main() {
     int totalItems = FormColorMap();
     int result = printColorMap();
-    int Misaligned_Pairs = 0
+    int Misaligned_Pairs = 0;
     int i = 0, j = 0;
     for(i = 0; i < 5; i++) {
         for(j = 0; j < 5; j++) {
