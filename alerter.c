@@ -24,15 +24,17 @@ int alertInCelcius(int NetworkResponse) {
 
 int main() {
       
+    /*float TempInput = 0;
     printf("Enter the temperature");
-    float TempInput = 0;
-    scanf("%f", &TempInput);
+    scanf("%f", &TempInput); //Not sure why this scanf part is not working */
+      
+    float TempInput = 300.6;
     float TempInCelsius = ConvertFahrenheitToCelsius(TempInput);
       
     int ResponseOk = networkAlertStubOk(TempInCelsius);
-    //int ResponseNotOk = networkAlertStubNotOk(TempInCelsius);
-      
     assert (alertInCelcius(ResponseOk) == 0); // Test for "ok" value
+    
+    //int ResponseNotOk = networkAlertStubNotOk(TempInCelsius);
     //assert (alertInCelcius(ResponseNotOk) != 0); // Test for "not-ok" value
     printf("All is well (maybe!)\n");
     return 0;
