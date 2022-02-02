@@ -37,7 +37,7 @@ int main() {
     int i = 0, j = 0;
     for(i = 0; i < 5; i++) {
         for(j = 0; j < 5; j++) {
-            if (ColorPairsTable[i*5+j][0] == majorColor[i]) && (ColorPairsTable[i*5+j][1] == minorColor[j])
+            if (!(ColorPairsTable[i*5+j][0] == majorColor[i]) && (ColorPairsTable[i*5+j][1] == minorColor[j]))
             {
                Misaligned_Pairs++;
             }
