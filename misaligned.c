@@ -33,11 +33,20 @@ int printColorMap() {
 int main() {
     int totalItems = FormColorMap();
     int result = printColorMap();
-    int a = (ColorPairsTable[0][0] == majorColor[0]) && (ColorPairsTable[0][1] == minorColor[0]);
+    int Misaligned_Pairs = 0
+    int i = 0, j = 0;
+    for(i = 0; i < 5; i++) {
+        for(j = 0; j < 5; j++) {
+            if (ColorPairsTable[i*5+j][0] == majorColor[i]) && (ColorPairsTable[i*5+j][1] == minorColor[j])
+            {
+               Misaligned_Pairs++;
+            }
+        }
+    }
     assert(totalItems == 25);
     assert(result == 25);
     assert (ColorPairsTable[0][0] == majorColor[0]);
-    assert (a == 1);
+    assert (Misaligned_Pairs == 0);
     printf("All is well (maybe!)\n");
     return 0;
 }
