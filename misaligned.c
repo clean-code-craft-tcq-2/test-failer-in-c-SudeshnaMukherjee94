@@ -35,7 +35,7 @@ int main() {
     int result = printColorMap();
     assert(totalItems == 25);
     assert(result == 25);
-    assert ((ColorPairsTable[0][0] == "White ") && (ColorPairsTable[0][1] == "Blue")); //Checking if the first color pair in the table is White and Blue
+    assert (ColorPairsTable[0][0] == majorColor[0]);
     printf("All is well (maybe!)\n");
     return 0;
 }
