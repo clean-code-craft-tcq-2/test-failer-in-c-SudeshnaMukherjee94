@@ -17,7 +17,7 @@ int alertInCelcius(int NetworkResponse) {
         // let us keep a count of failures to report
         // However, this code doesn't count failures!
         // Add a test below to catch this bug. Alter the stub above, if needed.
-        alertFailureCount += 0;
+        alertFailureCount ++ ;
     }
       return alertFailureCount;
 }
@@ -34,8 +34,9 @@ int main() {
     int ResponseOk = networkAlertStubOk(TempInCelsius);
     assert (alertInCelcius(ResponseOk) == 0); // Test for "ok" value
     
-    //int ResponseNotOk = networkAlertStubNotOk(TempInCelsius);
-    //assert (alertInCelcius(ResponseNotOk) != 0); // Test for "not-ok" value
+    int ResponseNotOk = networkAlertStubNotOk(TempInCelsius);
+    assert (alertInCelcius(ResponseNotOk) != 0); // Test for "not-ok" value
+    
     printf("All is well (maybe!)\n");
     return 0;
 }
