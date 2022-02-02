@@ -33,9 +33,11 @@ int printColorMap() {
 int main() {
     int totalItems = FormColorMap();
     int result = printColorMap();
+    int a = (ColorPairsTable[0][0] == majorColor[0]) && (ColorPairsTable[0][1] == minorColor[0]);
     assert(totalItems == 25);
     assert(result == 25);
     assert (ColorPairsTable[0][0] == majorColor[0]);
+    assert (a == 1);
     printf("All is well (maybe!)\n");
     return 0;
 }
