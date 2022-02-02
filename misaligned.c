@@ -24,14 +24,14 @@ int printColorMap() {
             printf(" %d | %s | %s\n", i * 5 + j +1, ColorPairsTable[i][0], ColorPairsTable[i*5+j][1]);
             }
     }
-            return 0;
+            return i*j;
 }
 
 int main() {
     int totalItems = FormColorMap();
     int result = printColorMap();
     assert(totalItems == 25);
-    assert(result == 0);
+    assert(result == 25);
     assert ((((ColorPairsTable)[0][0] == majorColor[0]) & (ColorPairsTable[0][1] == minorColor[0])) == 0); //Checking if the first color pair in the table is White and Blue
     assert ((((ColorPairsTable)[1][0] == majorColor[0]) & (ColorPairsTable[1][1] == minorColor[1])) == 0); //Checking if the second color pair in the table is White and Orange
     assert ((((ColorPairsTable)[2][0] == majorColor[0]) & (ColorPairsTable[2][1] == minorColor[2])) == 0); //Checking if the third color pair in the table is White and Green
