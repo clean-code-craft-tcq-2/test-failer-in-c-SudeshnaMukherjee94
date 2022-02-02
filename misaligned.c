@@ -11,7 +11,7 @@ int FormColorMap()  {
         for(j = 0; j < 5; j++) {
             //Storing the color table values from the buggy printf statement to test later
             ColorPairsTable[i*5+j][0] = majorColor[i]; //Column 1 for storing major colors
-            ColorPairsTable[i*5+j][1] = minorColor[i]; //Column 2 for storing minor colors
+            ColorPairsTable[i*5+j][1] = minorColor[j]; //Column 2 for storing minor colors
             }
     }
     return i * j;
