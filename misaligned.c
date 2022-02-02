@@ -35,7 +35,7 @@ int main() {
     int result = printColorMap();
     assert(totalItems == 25);
     assert(result == 25);
-    assert ((ColorPairsTable[0][0] == majorColor[0]) & (ColorPairsTable[0][1] == minorColor[0])); //Checking if the first color pair in the table is White and Blue
+    assert ((ColorPairsTable[0][0] == majorColor[0]) && (ColorPairsTable[0][1] == minorColor[0])); //Checking if the first color pair in the table is White and Blue
     assert ((ColorPairsTable[1][0] == majorColor[0]) & (ColorPairsTable[1][1] == minorColor[1])); //Checking if the second color pair in the table is White and Orange
     assert ((ColorPairsTable[2][0] == majorColor[0]) & (ColorPairsTable[2][1] == minorColor[2])); //Checking if the third color pair in the table is White and Green
     assert ((ColorPairsTable[3][0] == majorColor[0]) & (ColorPairsTable[3][1] == minorColor[3])); //Checking if the forth color pair in the table is White and Brown
